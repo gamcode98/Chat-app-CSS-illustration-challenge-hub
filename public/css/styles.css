@@ -44,13 +44,11 @@ body::before {
 }
 body::after {
   background-color: var(--Light-Grayish-Violet-app-background);
-  top: 70vh;
+  top: 100vh;
   right: 0;
   height: 90vh;
-  width: 100vw;
-  right: -50vw;
+  width: 50vw;
   border-top-left-radius: 100%;
-  border-top-right-radius: 100%;
 }
 .main {
   width: 85%;
