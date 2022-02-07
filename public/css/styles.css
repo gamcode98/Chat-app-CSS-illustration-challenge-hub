@@ -1,0 +1,306 @@
+:root {
+  /* Colors */
+  /* Primary */
+  /* Text */
+  --Pale-Violet-sub-heading-at-the-top-of-the-app-UI: hsl(276, 100%, 81%);
+  --Moderate-Violet-chat-on-the-left: hsl(276, 55%, 52%);
+  --Desaturated-Dark-Violet-chat-on-the-right: hsl(271, 15%, 43%);
+  --Grayish-Blue-placeholder-text: hsl(206, 6%, 79%);
+  --Very-Dark-Desaturated-Violet-main-heading: hsl(271, 36%, 24%);
+  --Dark-Grayish-Violet-paragraph: hsl(270, 7%, 64%);
+  /* Gradients */
+  /* These two colors are the vibrant background colors you see throughout the design and are applied as a linear gradient: */
+  --Light-Magenta: hsl(293, 100%, 63%);
+  --Light-Violet: hsl(264, 100%, 61%);
+  /* Secondary */
+  --White: hsl(0, 0%, 100%);
+  --Backround-msg-left: hsl(292, 37%, 92%);
+  --Light-Grayish-Violet-app-background: hsl(270, 20%, 96%);
+  --Very-Dark-Desaturated-Violet-submit-button-background: hsl(271, 36%, 24%);
+  --Very-Light-Magenta-radio-button-outline: hsl(289, 100%, 72%);
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+  font-size: 1rem;
+  font-family: "Rubik", sans-serif; /* 400, 500, 700 */
+}
+body::before,
+body::after {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  display: block;
+}
+body::before {
+  top: 0;
+  height: 90vh;
+  width: 100vw;
+  left: -50vw;
+  background-image: linear-gradient(var(--Light-Magenta), var(--Light-Violet));
+  border-bottom-right-radius: 100%;
+  border-bottom-left-radius: 100%;
+}
+body::after {
+  background-color: var(--Light-Grayish-Violet-app-background);
+  top: 70vh;
+  right: 0;
+  height: 90vh;
+  width: 100vw;
+  right: -50vw;
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
+}
+.main {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.phone {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  border: 0.5rem solid var(--White);
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 10px 10px 40px -20px rgba(0, 0, 0, 0.8);
+}
+.phone-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(
+    to right,
+    var(--Light-Violet),
+    var(--Light-Magenta)
+  );
+  padding: 2.5rem 1rem 1rem;
+  position: relative;
+  border-bottom-left-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+}
+.phone-heading::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 60%;
+  height: 30%;
+  background-color: var(--White);
+  top: 0;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+.heading-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.icon {
+  color: var(--White);
+}
+.avatar {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 0.1rem solid var(--White);
+}
+.avatar-name,
+.avatar-state {
+  margin: 0;
+}
+.avatar-name {
+  font-weight: 500;
+  color: var(--White);
+}
+.avatar-state {
+  font-weight: 400;
+  color: var(--Pale-Violet-sub-heading-at-the-top-of-the-app-UI);
+}
+.phone-body {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  font-size: 0.7rem;
+  background-color: var(--Light-Grayish-Violet-app-background);
+}
+.msg {
+  padding: 0.5rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+.msg-left {
+  color: var(--Moderate-Violet-chat-on-the-left);
+  background-color: var(--Backround-msg-left);
+  width: 55%;
+  border-top-left-radius: 0.8rem;
+  border-top-right-radius: 0.8rem;
+  border-bottom-right-radius: 0.8rem;
+  border-bottom-left-radius: 0.4rem;
+}
+.msg-left:nth-child(1) {
+  margin-top: 0.3rem;
+}
+.msg-left:nth-child(2) {
+  margin-bottom: 1rem;
+}
+.dog-images {
+  display: flex;
+  gap: 0.5rem;
+  align-self: flex-end;
+  margin-bottom: 0.5rem;
+}
+.dog {
+  border-radius: 0.5rem;
+  display: block;
+  width: 50px;
+}
+.msg-right {
+  color: var(--Very-Dark-Desaturated-Violet-main-heading);
+  align-self: end;
+  background-color: var(--White);
+  border-top-left-radius: 0.8rem;
+  border-top-right-radius: 0.8rem;
+  border-bottom-right-radius: 0.4rem;
+  border-bottom-left-radius: 0.8rem;
+}
+.dog-images + .msg-right {
+  width: 60%;
+}
+.msg-special {
+  background-image: linear-gradient(
+    to right,
+    var(--Light-Magenta),
+    var(--Light-Violet)
+  );
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  color: var(--White);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 2rem;
+  padding-right: 1rem;
+  position: relative;
+}
+.msg-special::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  border: 1px solid var(--White);
+  left: 0.5rem;
+}
+.price {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+.msg-input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--White);
+  border-radius: 2rem;
+  padding-left: 1.2rem;
+  padding-right: 0.3rem;
+  color: var(--Grayish-Blue-placeholder-text);
+}
+.msg-special + .msg-special {
+  margin-bottom: 1rem;
+}
+.icon-send {
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 25px;
+  background-color: var(
+    --Very-Dark-Desaturated-Violet-submit-button-background
+  );
+}
+.content {
+  margin-bottom: 3rem;
+}
+.title {
+  text-align: center;
+  font-weight: 500;
+  font-size: 2rem;
+  color: var(--Very-Dark-Desaturated-Violet-main-heading);
+}
+.paraph {
+  text-align: center;
+  line-height: 1.5rem;
+  color: var(--Dark-Grayish-Violet-paragraph);
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 500px) {
+  .main {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 600px) {
+  .main {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 800px) {
+  .main {
+    width: 45%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body {
+    max-height: 100vh;
+  }
+  body::before {
+    width: 40vw;
+    left: -20vw;
+    border-bottom-right-radius: 100%;
+    border-bottom-left-radius: 100%;
+  }
+  body::after {
+    top: initial;
+    right: 0;
+    bottom: 0;
+    height: 80vh;
+    width: 40vw;
+    right: -20vw;
+    background-color: var(--Light-Grayish-Violet-app-background);
+    background-position: bottom right;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+  }
+  .main {
+    width: 80%;
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+  }
+  .phone {
+    width: 30%;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .content {
+    max-width: 50%;
+  }
+  .title,
+  .paraph {
+    text-align: left;
+  }
+}
